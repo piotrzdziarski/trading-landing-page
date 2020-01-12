@@ -109,6 +109,10 @@
       bottom: 60px;
     }
 
+    @media (min-width: 1200px) {
+        
+    }
+
     &:hover {
       .svg {
         animation: btn-claim .6s;
