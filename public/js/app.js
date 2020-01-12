@@ -130,8 +130,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/piotrzdziarski/projects/laravel-mix-template/src/js/app.js */"./src/js/app.js");
-module.exports = __webpack_require__(/*! /home/piotrzdziarski/projects/laravel-mix-template/src/scss/app.scss */"./src/scss/app.scss");
+__webpack_require__(/*! /home/piotrzdziarski/projects/fireads/trading-landing-website/src/js/app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! /home/piotrzdziarski/projects/fireads/trading-landing-website/src/scss/app.scss */"./src/scss/app.scss");
 
 
 /***/ })

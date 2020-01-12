@@ -1,8 +1,7 @@
-# Template for simple pages
+# Trading landing website
 
 Uses Laravel Mix.
 
-Prepared: 
+Technologies: 
 - scss
 - js
-- browser-sync

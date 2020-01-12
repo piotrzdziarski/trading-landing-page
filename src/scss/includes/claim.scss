@@ -1,0 +1,160 @@
+.claim {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 175px;
+  background: url("/img/claim-colored.png");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 150% 150%;
+
+  h1 {
+    color: white;
+    font-size: 48px;
+    font-family: 'Myriad Pro Bold', sans-serif;
+
+    @media (min-width: 768px) {
+      font-size: 42px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 44px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 48px;
+    }
+  }
+
+  h2 {
+    margin-top: 5px;
+    color: white;
+    font-weight: 400;
+
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 32px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 36px;
+
+    }
+  }
+
+  .btn-wrapper {
+    margin-top: 35px;
+    padding: 18px 8px 16px 8px;
+    border-radius: 32px;
+    border: 2px solid #fff;
+
+    @media (min-width: 992px) {
+      padding: 19px 9px 17px 9px;
+    }
+  }
+
+  .btn {
+    position: relative;
+    padding: 12px 20px 10px 20px;
+    border-radius: 25px;
+    background: #fff;
+    color: $primary;
+    font-family: "Myriad Pro Bold", sans-serif;
+    font-size: 22px;
+
+    @media (min-width: 992px) {
+      padding: 13px 21px 11px 21px;
+      font-size: 24px;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      background: #eee;
+    }
+
+    &::after {
+      content: '';
+      @include full-size-absoluted;
+      transition: opacity .2s;
+      box-shadow: 0 0 41px 5px rgba(255, 255, 255, 0.21);
+      opacity: 0;
+    }
+  }
+
+  .btn-claim {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 17px 35px rgba(0, 0, 0, 0.11);
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+      bottom: 50px;
+    }
+
+    @media (min-width: 992px) {
+      bottom: 60px;
+    }
+
+    &:hover {
+      .svg {
+        animation: btn-claim .6s;
+      }
+    }
+  }
+
+  @keyframes btn-claim {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-5px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .wave {
+    width: 1200px;
+
+    @media (min-width: 768px) {
+      margin-top: 50px;
+      width: 1000px;
+    }
+
+    @media (min-width: 992px) {
+      margin-top: 10px;
+      width: 1205px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 1605px;
+    }
+
+    @media (min-width: 1600px) {
+      width: 100%;
+    }
+  }
+
+  .whiter {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+  }
+}

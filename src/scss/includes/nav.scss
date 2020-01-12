@@ -1,0 +1,28 @@
+#nav {
+  padding: 30px 0;
+  box-shadow: 0 17px 35px rgba(0, 0, 0, 0.11);
+
+  #collapse {
+
+  }
+
+  .a {
+    margin: 0 10px;
+    padding: 12px 20px 10px 20px;
+    color: $primary;
+    border-radius: 25px;
+    transition: background-color .2s, color .2s;
+    font-weight: 600;
+    font-size: 16px;
+
+    @media (min-width: 768px) {
+      margin: 0 12px;
+      padding: 14px 22px 12px 22px;
+    }
+
+    &:hover {
+      background: $primary;
+      color: #fff;
+    }
+  }
+}
