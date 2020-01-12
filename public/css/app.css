@@ -73,12 +73,65 @@ h6 {
 }
 
 #nav {
-  padding: 30px 0;
-  box-shadow: 0 17px 35px rgba(0, 0, 0, 0.11);
+  position: relative;
+  height: 80px;
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  #nav {
+    box-shadow: 0 17px 35px rgba(0, 0, 0, 0.11);
+  }
+}
+
+#nav #collapse {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  width: 100%;
+  background: #fff;
+  -webkit-transition: max-height .3s, opacity .3s;
+  transition: max-height .3s, opacity .3s;
+  opacity: 0;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  #nav #collapse {
+    position: static;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    padding-bottom: unset;
+    opacity: 1 !important;
+  }
+
+  #nav #collapse.active {
+    box-shadow: unset !important;
+  }
+}
+
+#nav #collapse.active {
+  opacity: 1;
+  box-shadow: 0 40px 35px rgba(0, 0, 0, 0.11);
+}
+
+#nav #collapse.active .a {
+  visibility: visible;
 }
 
 #nav .a {
-  margin: 0 10px;
+  margin: 10px 10px;
   padding: 12px 20px 10px 20px;
   color: #4e4887;
   border-radius: 25px;
@@ -86,18 +139,120 @@ h6 {
   transition: background-color .2s, color .2s;
   font-weight: 600;
   font-size: 16px;
+  visibility: hidden;
 }
 
 @media (min-width: 768px) {
   #nav .a {
     margin: 0 12px;
     padding: 14px 22px 12px 22px;
+    visibility: visible !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  #nav .a {
+    margin: 0 15px;
+    padding: 15px 23px 13px 23px;
   }
 }
 
 #nav .a:hover {
   background: #4e4887;
   color: #fff;
+}
+
+#nav .a:first-child {
+  margin-top: 80px;
+}
+
+@media (min-width: 768px) {
+  #nav .a:first-child {
+    margin-top: unset;
+  }
+}
+
+#nav .a:last-child {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  #nav .a:last-child {
+    margin-bottom: unset;
+  }
+}
+
+#nav #hamburger {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  #nav #hamburger {
+    display: none;
+  }
+}
+
+#nav #hamburger-inner {
+  position: relative;
+  width: 40px;
+  height: 2px;
+  border-radius: 4px;
+  background: #fff;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+#nav #hamburger-inner::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  width: 40px;
+  height: 2px;
+  border-radius: 4px;
+  background: #fff;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+#nav #hamburger-inner::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  width: 40px;
+  height: 2px;
+  border-radius: 4px;
+  background: #fff;
+  -webkit-transition: opacity .1s;
+  transition: opacity .1s;
+}
+
+#nav #hamburger-inner.active {
+  background: #4e4887;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#nav #hamburger-inner.active::before {
+  background: #4e4887;
+  -webkit-transform: rotate(90deg) translateX(11px);
+          transform: rotate(90deg) translateX(11px);
+}
+
+#nav #hamburger-inner.active::after {
+  background: #4e4887;
+  opacity: 0;
 }
 
 .claim {
@@ -111,18 +266,46 @@ h6 {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  padding-top: 175px;
+  margin-top: -80px;
+  padding-top: 200px;
   background: url("/img/claim-colored.png");
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 150% 150%;
+  background-size: auto 150%;
+}
+
+@media (min-width: 576px) {
+  .claim {
+    padding-top: 225px;
+  }
+}
+
+@media (min-width: 768px) {
+  .claim {
+    margin-top: unset;
+    padding-top: 175px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .claim {
+    padding-top: 250px;
+  }
 }
 
 .claim h1 {
+  padding: 0 15px;
   color: white;
-  font-size: 48px;
+  font-size: 38px;
   font-family: 'Myriad Pro Bold', sans-serif;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .claim h1 {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -145,8 +328,17 @@ h6 {
 
 .claim h2 {
   margin-top: 5px;
+  padding: 0 15px;
   color: white;
+  font-size: 26px;
   font-weight: 400;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .claim h2 {
+    font-size: 28px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -197,6 +389,12 @@ h6 {
   }
 }
 
+@media (min-width: 1600px) {
+  .claim .btn {
+    font-size: 26px;
+  }
+}
+
 .claim .btn:hover::after {
   opacity: 1;
 }
@@ -220,12 +418,19 @@ h6 {
 
 .claim .btn-claim {
   position: absolute;
+  bottom: 10px;
   width: 70px;
   height: 70px;
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 17px 35px rgba(0, 0, 0, 0.11);
   cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .claim .btn-claim {
+    bottom: 25px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -237,6 +442,22 @@ h6 {
 @media (min-width: 992px) {
   .claim .btn-claim {
     bottom: 60px;
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .claim .btn-claim {
+    bottom: 90px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .claim .btn-claim {
+    bottom: 110px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -280,7 +501,19 @@ h6 {
 }
 
 .claim .wave {
-  width: 1200px;
+  margin-top: 100px;
+  width: 580px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 576px) {
+  .claim .wave {
+    margin-top: 120px;
+    width: 770px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -305,11 +538,13 @@ h6 {
 
 @media (min-width: 1600px) {
   .claim .wave {
+    margin-top: 50px;
     width: 100%;
   }
 }
 
 .claim .whiter {
+  margin-top: -1px;
   background: #fff;
   height: 100%;
   width: 100%;
