@@ -1,4 +1,31 @@
 .btn {
+  display: inline-block;
   font-weight: 700;
   cursor: pointer;
+  border: unset;
+  text-align: center;
+}
+
+.btn-primary {
+  border-radius: 30px;
+  background: $primary;
+  color: #fff;
+  font-family: 'Myriad Pro Bold', sans-serif;
+  font-size: 20px;
+
+  @media (min-width: 576px) {
+    font-size: 22px;
+  }
+}
+
+.btn-white {
+  border-radius: 30px;
+  background: white;
+  color: $primary;
+  font-family: 'Myriad Pro Bold', sans-serif;
+  font-size: 20px;
+
+  @media (min-width: 576px) {
+    font-size: 22px;
+  }
 }
