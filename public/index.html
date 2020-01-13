@@ -14,9 +14,9 @@
     <div id="collapse">
         <a href="#o-mnie" class="a">O mnie</a>
         <a href="#opinie" class="a">Opinie</a>
-        <a href="#opinie" class="a">Moje wyniki</a>
-        <a href="#opinie" class="a">Zacznij zarabiać</a>
-        <a href="#opinie" class="a">Kontakt</a>
+        <a href="#wyniki" class="a">Moje wyniki</a>
+        <a href="#zacznij-zarabiac" class="a">Zacznij zarabiać</a>
+        <a href="#" class="a">Kontakt</a>
     </div>
     <div id="hamburger" class="flex-centered">
         <div id="hamburger-inner">
@@ -30,22 +30,22 @@
             <h1>Lorem Ipsum is simply dummy text</h1>
             <h2>of the printing and typesetting industry.</h2>
             <div class="btn-wrapper">
-                <a class="btn">
+                <a class="btn" href="#zacznij-zarabiac">
                     chcę zarabiać!
                 </a>
             </div>
         </div>
-        <div class="btn-claim flex-centered">
+        <a href="#o-mnie" class="btn-claim flex-centered">
             <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27">
                 <path fill="#4e4887"
                       d="M14.005 16.55a1.947 1.947 0 0 1-1.387-.58L.578 3.827a1.99 1.99 0 0 1 0-2.797 1.95 1.95 0 0 1 2.774 0l10.653 10.746L24.657 1.029a1.949 1.949 0 0 1 2.773 0 1.99 1.99 0 0 1 0 2.797L15.39 15.971a1.946 1.946 0 0 1-1.385.579zm0 10a1.946 1.946 0 0 1-1.387-.58L.578 13.827a1.99 1.99 0 0 1 0-2.797 1.95 1.95 0 0 1 2.774 0l10.653 10.746 10.652-10.746a1.949 1.949 0 0 1 2.773 0 1.99 1.99 0 0 1 0 2.798L15.39 25.97a1.946 1.946 0 0 1-1.385.579z" />
             </svg>
-        </div>
+        </a>
         <img src="/img/wave.svg" alt="White wave svg" class="wave">
         <div class="whiter"></div>
     </section>
 
-    <section class="about">
+    <section class="about" id="o-mnie">
         <div class="container md-flex-centered">
             <img class="img" src="/img/about.jpg" alt="Zarabianie w internecie - nauka" />
             <div class="divider"></div>
@@ -70,7 +70,7 @@
         </div>
     </section>
 
-    <section class="results">
+    <section id="wyniki" class="results">
         <div class="container">
             <div class="flex-centered">
                 <h3 class="btn btn-white btn-home">Moje wyniki</h3>
@@ -94,7 +94,7 @@
         </div>
     </section>
 
-    <section class="section-opinions">
+    <section id="opinie" class="section-opinions">
         <div class="container">
             <div class="flex-centered">
                 <h3 class="btn btn-primary btn-home">
@@ -117,9 +117,27 @@
         </div>
     </section>
 
-    <section class="start-earning">
+    <section id="zacznij-zarabiac" class="start-earning">
         <div class="container md-flex-centered">
-            
+            <div class="block-text">
+                <h3 class="btn btn-primary btn-home">Zacznij zarabiać!</h3>
+                <p class="first-p">
+                    Na początku nie potrzebujesz żadnej wiedzy, wszystko zostanie Ci wytłumaczone. Pamiętaj, że zawsze
+                    możesz liczyć także na moją pomoc, wiem jak to jest szukać swojego miejsca i opłacalnej pracy i wiem
+                    także jak bardzo jest to ciężkie. Tobie chciałabym zaoszczędzić tego co ja musiałam przechodzić.
+                </p>
+                <p class="bolded">
+                    Zdecydowany? Podaj swoją nazwę na instagramie i stań się już teraz członkiem mojego zespołu.
+                </p>
+                <form id="form" action="https://fireads.com/753/75357">
+                    <input id="instagram" class="input" type="text" placeholder="Twój instagram">
+                    <button type="submit" id="submit-btn" class="btn btn-primary">
+                        Dalej
+                    </button>
+                </form>
+            </div>
+            <div class="divider"></div>
+            <img class="img" src="/img/start-earning.jpg" alt="Zacznij zarabiać!">
         </div>
     </section>
 </main>
