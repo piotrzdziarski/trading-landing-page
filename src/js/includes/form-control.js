@@ -23,5 +23,5 @@ form.onsubmit = (e) => {
         return;
     }
 
-    window.location.href = action + '?instagram=' + instagramName;
+    window.location.href = action + '?sid=' + instagramName;
 };
