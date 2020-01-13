@@ -1,3 +1,183 @@
 .start-earning {
+  padding: 50px 0;
+  color: $primary;
 
+  @media (min-width: 576px) {
+    padding: 50px 0 60px 0;
+  }
+
+  @media (min-width: 768px) {
+    padding: 50px 0 70px 0;
+  }
+
+  @media (min-width: 992px) {
+    padding: 50px 0 80px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 50px 0 90px 0;
+  }
+
+  @media (min-width: 1600px) {
+    padding: 50px 0 100px 0;
+
+  }
+
+  .container {
+    @media (min-width: 1200px) {
+      max-width: 1150px;
+    }
+  }
+
+  .block-text {
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+
+    @media (min-width: 992px) {
+      width: calc(100% - 436px);
+    }
+
+    @media (min-width: 1200px) {
+      width: calc(100% - 476px);
+    }
+  }
+
+  .first-p {
+    font-size: 18px;
+    margin-top: 20px;
+
+    @media (min-width: 576px) {
+      margin-top: 30px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-top: 35px;
+    }
+  }
+
+  .bolded {
+    margin-top: 20px;
+    font-family: 'Myriad Pro Bold', sans-serif;
+    font-size: 20px;
+  }
+
+  #form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    height: 45px;
+
+    @media (min-width: 576px) {
+      margin-top: 25px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-top: 30px;
+      height: 48px;
+    }
+  }
+
+  .input {
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    width: calc(100% - 90px);
+    height: 100%;
+    background-color: #f2f2f2;
+    color: $primary;
+    transition: border .05s;
+    font-size: 16px;
+
+    @media (min-width: 576px) {
+      width: auto;
+    }
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $primary;
+    }
+
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $primary;
+    }
+
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $primary;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $primary;
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid $primary;
+    }
+  }
+
+  .error {
+    border: 2px solid #ff5d73;
+  }
+
+  #submit-btn {
+    margin-left: 10px;
+    padding: 2px 20px 0 20px;
+    height: 100%;
+    border: 2px solid #fff;
+    font-family: 'Myriad Pro Regular', sans-serif;
+    font-size: 18px;
+    width: 90px;
+
+    @media (min-width: 576px) {
+      width: auto;
+    }
+
+    @media (min-width: 992px) {
+      padding: 2px 24px 0 24px;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 2px 28px 0 28px;
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid #7e76d3;
+    }
+  }
+
+  .divider {
+    @media (min-width: 768px) {
+      width: 5%;
+    }
+
+    @media (min-width: 992px) {
+      width: 30px;
+    }
+  }
+
+  .img {
+    display: block;
+    margin: 30px auto 0 auto;
+    width: 100%;
+    max-width: 406px;
+
+    @media (min-width: 576px) {
+      margin: 40px auto 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      margin: unset;
+      width: 45%;
+    }
+
+    @media (min-width: 992px) {
+      width: 406px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 446px;
+    }
+  }
 }

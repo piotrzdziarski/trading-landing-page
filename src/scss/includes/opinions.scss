@@ -41,7 +41,7 @@
 
     @media (min-width: 1200px) {
       margin-top: unset;
-      width: calc(50% - 25px);
+      width: calc(50% - 15px);
     }
 
     @media (min-width: 1600px) {
@@ -58,7 +58,7 @@
     }
 
     @media (min-width: 1200px) {
-      width: calc(50% - 25px);
+      width: calc(50% - 15px);
     }
 
     @media (min-width: 1600px) {
@@ -69,17 +69,13 @@
 
   .md-divider {
     @media (min-width: 768px) {
-      width: 40px;
-    }
-
-    @media (min-width: 992px) {
-      width: 50px;
+      width: 30px;
     }
   }
 
   .hg-divider {
     @media (min-width: 1200px) {
-      width: 50px;
+      width: 40px;
     }
   }
 }
