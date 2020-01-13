@@ -1,8 +1,59 @@
 .results {
   background: $primary;
-  padding: 50px 0;
+  padding: 50px 0 40px 0;
 
-  .btn {
-    padding: 10px 20px;
+  @media (min-width: 768px) {
+    padding: 50px 0;
+  }
+
+  @media (min-width: 992px) {
+    padding: 50px 0 70px 0;
+  }
+
+  .counters {
+    @media (min-width: 768px) {
+      margin-top: 40px;
+    }
+
+    @media (min-width: 992px) {
+      margin-top: 60px;
+    }
+  }
+
+  article {
+    margin: 40px 0;
+
+    @media (min-width: 768px) {
+      margin: unset;
+    }
+  }
+
+  .divider {
+    @media (min-width: 768px) {
+      width: 40px;
+    }
+
+    @media (min-width: 992px) {
+      width: 60px;
+    }
+  }
+
+  .counter {
+    color: #fff;
+    font-family: 'Myriad Pro Bold', sans-serif;
+    font-size: 70px;
+  }
+
+  p {
+    margin-top: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Myriad Pro Bold', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
   }
 }

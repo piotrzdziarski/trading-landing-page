@@ -1,0 +1,85 @@
+.section-opinions {
+  padding: 50px 0;
+
+  @media (min-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: 992px) {
+    padding: 70px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 80px 0;
+  }
+
+  .opinions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      margin-top: 60px;
+    }
+
+    @media (min-width: 1600px) {
+      margin-top: 70px;
+    }
+  }
+
+  .md-row {
+    @media (min-width: 768px) {
+      margin-top: 40px;
+    }
+
+    @media (min-width: 992px) {
+      margin-top: 50px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-top: unset;
+      width: calc(50% - 25px);
+    }
+
+    @media (min-width: 1600px) {
+      width: auto;
+    }
+  }
+
+  .opinion {
+    margin-top: 30px;
+    max-width: 288px;
+
+    @media (min-width: 768px) {
+      margin-top: unset;
+    }
+
+    @media (min-width: 1200px) {
+      width: calc(50% - 25px);
+    }
+
+    @media (min-width: 1600px) {
+      width: 288px;
+    }
+  }
+
+
+  .md-divider {
+    @media (min-width: 768px) {
+      width: 40px;
+    }
+
+    @media (min-width: 992px) {
+      width: 50px;
+    }
+  }
+
+  .hg-divider {
+    @media (min-width: 1200px) {
+      width: 50px;
+    }
+  }
+}

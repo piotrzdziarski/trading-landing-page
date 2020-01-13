@@ -64,6 +64,23 @@
   }
 }
 
+.btn-home {
+  cursor: unset;
+  padding: 10px 20px;
+}
+
+@media (min-width: 992px) {
+  .btn-home {
+    padding: 12px 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn-home {
+    padding: 14px 28px;
+  }
+}
+
 .flex-centered {
   display: -webkit-box;
   display: flex;
@@ -81,6 +98,17 @@
 
 @media (min-width: 768px) {
   .md-flex-centered {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hg-flex-centered {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
@@ -641,12 +669,24 @@ h6 {
 }
 
 .about {
-  padding: 50px 0;
+  padding: 50px 0 40px 0;
 }
 
 @media (min-width: 768px) {
   .about {
-    padding: 40px 0;
+    padding: 30px 0 40px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .about {
+    padding: 20px 0 50px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about {
+    padding: 30px 0 60px 0;
   }
 }
 
@@ -720,22 +760,6 @@ h6 {
   }
 }
 
-.about .btn {
-  padding: 10px 20px;
-}
-
-@media (min-width: 992px) {
-  .about .btn {
-    padding: 12px 24px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .about .btn {
-    padding: 14px 28px;
-  }
-}
-
 .about .p {
   padding-top: 15px;
   color: #4e4887;
@@ -766,11 +790,188 @@ h6 {
 
 .results {
   background: #4e4887;
+  padding: 50px 0 40px 0;
+}
+
+@media (min-width: 768px) {
+  .results {
+    padding: 50px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .results {
+    padding: 50px 0 70px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .results .counters {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .results .counters {
+    margin-top: 60px;
+  }
+}
+
+.results article {
+  margin: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .results article {
+    margin: unset;
+  }
+}
+
+@media (min-width: 768px) {
+  .results .divider {
+    width: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .results .divider {
+    width: 60px;
+  }
+}
+
+.results .counter {
+  color: #fff;
+  font-family: 'Myriad Pro Bold', sans-serif;
+  font-size: 70px;
+}
+
+.results p {
+  margin-top: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Myriad Pro Bold', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.results p:last-child {
+  margin-bottom: unset;
+}
+
+.section-opinions {
   padding: 50px 0;
 }
 
-.results .btn {
-  padding: 10px 20px;
+@media (min-width: 768px) {
+  .section-opinions {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-opinions {
+    padding: 70px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-opinions {
+    padding: 80px 0;
+  }
+}
+
+.section-opinions .opinions {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+  .section-opinions .opinions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .section-opinions .opinions {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-opinions .md-row {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-opinions .md-row {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-opinions .md-row {
+    margin-top: unset;
+    width: calc(50% - 25px);
+  }
+}
+
+@media (min-width: 1600px) {
+  .section-opinions .md-row {
+    width: auto;
+  }
+}
+
+.section-opinions .opinion {
+  margin-top: 30px;
+  max-width: 288px;
+}
+
+@media (min-width: 768px) {
+  .section-opinions .opinion {
+    margin-top: unset;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-opinions .opinion {
+    width: calc(50% - 25px);
+  }
+}
+
+@media (min-width: 1600px) {
+  .section-opinions .opinion {
+    width: 288px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-opinions .md-divider {
+    width: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-opinions .md-divider {
+    width: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-opinions .hg-divider {
+    width: 50px;
+  }
 }
 
 body {
