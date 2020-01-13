@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   margin-top: -80px;
   padding-top: 200px;
@@ -76,12 +76,16 @@
 
   .btn-wrapper {
     margin-top: 35px;
-    padding: 18px 8px 16px 8px;
+    padding: 7px;
     border-radius: 32px;
     border: 2px solid #fff;
 
-    @media (min-width: 992px) {
-      padding: 19px 9px 17px 9px;
+    @media (min-width: 576px) {
+      padding: 8px;
+    }
+
+    @media (min-width: 768px) {
+      padding: 9px;
     }
   }
 
@@ -124,7 +128,9 @@
 
   .btn-claim {
     position: absolute;
-    bottom: 10px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 70px;
     height: 70px;
     background: #fff;
@@ -133,21 +139,21 @@
     cursor: pointer;
 
     @media (min-width: 576px) {
-      bottom: 25px;
+      bottom: 5px;
     }
 
     @media (min-width: 768px) {
-      bottom: 50px;
+      bottom: 30px;
     }
 
     @media (min-width: 992px) {
-      bottom: 60px;
+      bottom: 50px;
       width: 75px;
       height: 75px;
     }
 
     @media (min-width: 1200px) {
-      bottom: 90px;
+      bottom: 70px;
     }
 
     @media (min-width: 1600px) {
